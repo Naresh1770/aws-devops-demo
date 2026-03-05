@@ -43,7 +43,7 @@ pipeline{
             steps{
                 sh '''
                 docker rm -f node-s3 || true
-                docker run -d -p 3000:3000 --name nodejs_project naresh1770/node-s3:v1
+                docker run -d -p 3000:3000 --name nodejs_pro naresh1770/node-s3:v1
                 '''
             }
         } 
