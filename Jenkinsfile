@@ -47,7 +47,12 @@ pipeline{
                 '''
             }
         } 
-        stage('Upload Aetifact to S3'){
+        stage('Create Artifact'){
+            steps{
+                sh 'zip -r app.zip .'
+            }
+        }
+        stage('Upload Artifact to S3'){
             steps{
                 sh 'aws s3 cp app.zip s3://naresh-devops-artifacts/'
             }
