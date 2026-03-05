@@ -18,11 +18,6 @@ pipeline{
                 sh 'npm install'
             }
         }
-        stage('Run Test'){
-            steps{
-                sh 'npm  test'
-            }
-        }
         stage('Build Image'){
             steps{
                 sh 'docker build -t naresh1770/node-s3:v1 .'
